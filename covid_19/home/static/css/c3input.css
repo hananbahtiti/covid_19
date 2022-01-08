@@ -1,0 +1,143 @@
+@import "bourbon";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+ *{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif; } 
+body {
+  font-family: 'Lato', sans-serif;
+   background-color:  #007f5f	;
+}
+
+.head { 
+    background-color: #087F8C;
+}
+.header { height: 100%; width: 80%;
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1 { 
+    
+    color: rgb(155, 215, 31);
+    transform: translateY(10px);
+    padding-bottom: 15px;
+    
+}
+nav { 
+    word-spacing: 2rem; 
+}
+nav a { 
+    color: white;
+    text-decoration: none;
+    transition: color 0.7s ease; 
+}
+nav a:hover {
+    color:rgb(155, 215, 31);
+}
+/* home */
+/*amination*/
+.animatediv{
+  animation: MoveUpDown 10s linear infinite;
+  position: absolute;
+  right: 200px;
+  }
+
+
+ @keyframes MoveUpDown {
+  0%, 100% {
+    top: 350px;
+  }
+  40% {
+    top: 40px;
+  }
+}     
+/*end amination*/
+#showcase {
+
+    background-color: #f8f9fa;
+    position: relative; 
+    background-size: contain;
+    height: 500px;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+#showcase::after { content: '';
+    position: absolute;
+    bottom: -4rem; 
+    left: 0;
+    width: 100%;
+    height: 15vh; 
+    background-color: #006d77; 
+    transform: skew(0, -4deg);
+}
+#showcase h1 {
+    margin-top:  -100px;
+    font-size: 2.2rem;
+     color:rgb(155, 215, 31);
+}
+#showcase p {
+    margin-top:  20px;
+    color: black; 
+    font-weight: lighter;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+}
+.info { 
+    padding: 0 4rem; 
+    width: 50%; 
+}
+
+#button1 {
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #037a86;
+    width: 150px; 
+    height: 40px;
+    color: white; 
+    font-weight: light;
+    background-color: rgb(155, 215, 31);
+  /*background-color:rgb(153, 184, 70);*/
+    padding-top: 6px;
+    padding-left: 17px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 20px;
+    
+
+}
+
+.button2 {
+    width: 150px;
+    display: inline-block;
+    margin-top: -15px;
+    border: 1px solid #037a86;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: light;
+    background: #037a86;
+    padding: 10px 20px; 
+    border-radius:20px; 
+    outline-color: white;} 
+
+.button1:hover{ width: 170px; }
+.button2:hover {
+    width: 170px; 
+    outline-color: #037a86;
+    
+    
+}
+
+@media screen and (max-width: 450px) {
+   .part2{ width: 381px;
+    float: left;
+    margin-top: 438px;
+    margin-left: -376px;}
+}
+@media screen and (max-width: 500px){.part1{width: 30%;}}

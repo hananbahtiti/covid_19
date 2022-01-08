@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Login</title>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'CSS/style12.css' %}">
+</head> 
+<body style="background-color: #f8f8f9">
+
+<header class="head"> 
+<div class="header">
+<div class="logo">
+<h1>COVID-19</h1>
+</div> <nav> 
+</nav>
+    </div> 
+        </header>
+     <div class="back">
+        <div class="container">
+            <div class="part">
+            <div class="part1"></div>
+             <div class="part2">
+        <form id="msform" action="{% url 'login' %}" method="POST">
+            <div>
+                {{form.errors.name}}
+            </div>
+          {% csrf_token %}
+            <div style=" display:  flex;">
+            {{form}}</div><br>
+            </a><br>
+            <button style="padding: 10px; font-size: 25px; width: 200px; border-radius: 5px; outline: none; border-color: transparent; background-color: rgb(0, 100, 255); color: white;">login</button>
+            <a style="float: left;" href="{% url 'password_reset' %}">Forgot password?</a>
+            </form><br>
+            <p>Don't have an account? <a href="{%url 'accounts:signup'%}">signup for free</a></p>
+        </div></div>
+    </body>
+</html>

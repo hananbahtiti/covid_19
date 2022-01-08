@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Login</title>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'CSS/style12.css' %}">
+</head> 
+<body style="background-color: #f8f8f9">
+
+<header class="head"> 
+<div class="header">
+<div class="logo">
+<h1>COVID-19</h1>
+</div> <nav> 
+<a href="{% url 'home:home' %}">Home</a>
+        <a href="#">Flights</a>
+        <a href="{% url 'signup' %}">SignUp</a>
+        <a href="{% url 'login' %} ">Login</a>
+</nav>
+    </div> 
+        </header>
+     <div class="back">
+        <div class="container">
+            <div class="part">
+            <div class="part1"></div>
+             <div class="part2">
+        <form id="msform" method="POST">
+          {% csrf_token %}
+            <h2>login</h2>
+            <label class="form1">Email address :</label>
+            <input  type="email" name="email" placeholder="example@example.com " required >
+            <label class="form1">Password :</label>
+            <input type="password" name="password" id="myInput" placeholder="Password" required >
+            <div class="chekp">
+            <input type="checkbox" onclick="myFunction()" class="checkbox1"><p>Show Password </p> </div>
+            <input type="submit" value="Login" required>
+            <a href="{% url 'signup' %} ">
+            <input type="button" value="SIGN UP" onclick="displaySighnUp()" required>
+            </a>
+            
+            </form>
+        </div></div>
+    </body>
+    </html>

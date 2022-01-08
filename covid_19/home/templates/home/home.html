@@ -1,0 +1,64 @@
+{% load static%}
+
+<!DOCTYPE html> 
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COVID-19</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'CSS/style12.css' %}"> 
+    </head>
+    <body>
+        <header class="head">
+    <div class="header">
+        <div class="logo">
+            <h1>COVID-19</h1>
+        </div>
+        <nav> <a href="{% url 'home:home' %}">Home</a>
+          
+            <a href="{% url 'accounts:signup' %}">SignUp</a>
+            
+            {% if request.user %}
+                <a href="{% url 'accounts:logout' %} ">LogOut</a>
+            {% else %}
+                <a href="{% url 'accounts:login' %} ">LogIn</a>
+            {% endif %}
+        </nav> 
+            </div> 
+        </header>
+    <section id="showcase"> 
+        <div class="info">
+            <div class="animatediv"> 
+  <img src="{% static 'Images/corona-virus.png' %}">
+    </div>
+            <h1>Ready to test your body ?</h1> 
+           <h2> <p>To protect yourself from Coronavirus, follow public health laws and maintain social distancing.</p> </h2>
+            <button class="button1"><a href= "{% url 'test_img:image_upload' %}">Test</a></button> 
+            <button class="button2">  <a href="{% url 'test_img:total_cases' %}">More info</a> </button>
+        </div>
+        </section>
+        <h1 class="title">Warnings</h1>
+        <section id="warning"> <div class="Statey"> 
+            <img src="{% static 'Images/report.jpg' %}">
+            <h1>statistics</h1> 
+            <h2></h2> 
+            <h3>from more info</h3> 
+            </div> <div class="corona"> 
+            <img src="{% static 'Images/covid.jpg' %}">
+            <h1>Corona Viros</h1> 
+            <h2>spread</h2>
+            
+            <h3><b>10 milion in the world</b></h3> 
+            </div> <div class="mask"> 
+            <img src="{% static 'Images/pc.jpg' %}"> 
+            <h1>The mask</h1> <h2>very important out door</h2> 
+            <h3>use all day</h3>
+            </div> </section> <footer id="foot">
+        <div class="information"> <div class="icon"> 
+            <img src="{% static 'Images/facebook.png' %}"> <img src="{% static 'Images/instagram.png' %}">
+            <img src="{% static 'Images/youtube.png' %}"> </div> <div class="title2"> 
+            <h3>&copy;2021 All Rights Reserved. </h3> 
+    </div> 
+    </div>
+    </footer> </body> </html>
